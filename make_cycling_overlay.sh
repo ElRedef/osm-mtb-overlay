@@ -1,50 +1,42 @@
 #!/usr/bin/env bash
 
-MKGMAP="java -jar /home/johannes/OSM/mkgmap.jar"
+
 
 if [ -z "$1" ]; then
     echo "Nutzung: $0 dateiname.osm.pbf"
     exit 1
 fi
 
+MKGMAP="java -jar /home/johannes/OSM/mkgmap.jar"
 INPUT_PBF="$1"
 BASENAME=$(basename "$INPUT_PBF" .osm.pbf)
 EXTRACT_PBF="temp_mtb_${BASENAME}.osm.pbf"
 
-# 1. Filtern: Wir nehmen alles mit MTB-Tags oder Mountainbike-Routen
+
+# 1. Filtern
 echo "--- Filtere MTB-Trails ---"
-osmium tags-filter "$INPUT_PBF" \
-    w/mtb:scale \
-    w/route=mtb \
-    w/highway=path \
-    w/highway=track \
-    -o "$EXTRACT_PBF" --overwrite
+osmium tags-filter "$INPUT_PBF" w/mtb:scale w/route=mtb w/highway=path w/highway=track -o "$EXTRACT_PBF" --overwrite
 
-# 2. Prüfen ob Style-Ordner existiert
-if [ ! -d "/home/johannes/OSM/mtb_style" ]; then
-    echo "Fehler: Ordner 'mtb_style/lines' mit Style-Datei nicht gefunden!"
-    exit 1
-fi
+# 2. TYP-Datei kompilieren (erzeugt mtb.typ)
+echo "--- Kompiliere TYP-Datei ---"
+$MKGMAP /home/johannes/OSM/mtb.txt
 
-echo "--- Erstelle IMG Datei mit MTB-Styles ---"
-
-# --style-file sagt mkgmap, dass es unsere Regeln nutzen soll
+# 3. IMG Datei mit Style UND TYP-Datei bauen
+echo "--- Erstelle IMG Datei mit Style und TYP ---"
 $MKGMAP --transparent \
     --draw-priority=110 \
     --family-id=9998 \
-    --family-name="MTB-Overlay-${BASENAME}" \
-    --style-file=/home/johannes/OSM/mtb_style\
-    --gmapsupp "$EXTRACT_PBF"
+    --product-id=1 \
+    --family-name="MTB-Overlay" \
+    --style-file=/home/johannes/OSM/mtb_style \
+    --gmapsupp "$EXTRACT_PBF" /home/johannes/OSM/mtb.typ
 
+# 4. Aufräumen
 if [ -f "gmapsupp.img" ]; then
     mv gmapsupp.img "${BASENAME}_mtb.img"
-    rm "$EXTRACT_PBF" [0-9]*.img osmmap.tdb 2>/dev/null
+    rm osmmap.img
+    rm "$EXTRACT_PBF" [0-9]*.img osmmap.tdb mtb.typ 2>/dev/null
     echo "--- Erfolg! MTB-Karte erstellt: ${BASENAME}_mtb.img ---"
 else
-    echo "Fehler beim Erstellen der IMG-Datei."
+    echo "Fehler beim Erstellen."
 fi
-
-
-
-
-

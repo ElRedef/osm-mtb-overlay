@@ -1,0 +1,38 @@
+[Options]
+Unit=M
+FID=9998
+ProductCode=1
+CodePage=1252
+[end]
+
+[_line]
+Type=0x01
+String1=MTB Scale 2
+LineWidth=3
+Xpm="0 0 1 0"
+"1 c #FF0000"
+[end]
+
+[_line]
+Type=0x03
+String1=MTB Scale 3
+LineWidth=4
+Xpm="0 0 1 0"
+"1 c #000000"
+[end]
+
+[_line]
+Type=0x06
+String1=MTB Scale 0
+LineWidth=2
+Xpm="0 0 1 0"
+"1 c #00FF00"
+[end]
+
+[_line]
+Type=0x0a
+String1=MTB Scale 1
+LineWidth=3
+Xpm="0 0 1 0"
+"1 c #0000FF"
+[end]
