@@ -1,0 +1,16 @@
+LICENCE
+*.Identifier
+README
+
+doc/
+examples/
+lib/
+mkgmap.jar
+
+osmconvert
+
+osmfilter
+
+splitter-r654/
+splitter.jar
+
