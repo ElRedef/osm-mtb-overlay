@@ -15,7 +15,12 @@ EXTRACT_PBF="temp_mtb_${BASENAME}.osm.pbf"
 
 # 1. Filtern
 echo "--- Filtere MTB-Trails ---"
-osmium tags-filter "$INPUT_PBF" w/mtb:scale w/route=mtb w/highway=path w/highway=track -o "$EXTRACT_PBF" --overwrite
+osmium tags-filter "$INPUT_PBF"  \
+    w/mtb:scale \
+    w/route=mtb \
+    w/highway=path \
+    w/highway=track  \
+    -o "$EXTRACT_PBF" --overwrite
 
 # 2. TYP-Datei kompilieren (erzeugt mtb.typ)
 echo "--- Kompiliere TYP-Datei ---"
