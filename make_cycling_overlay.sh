@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+MKGMAP="java -jar /home/johannes/OSM/mkgmap.jar"
+
 if [ -z "$1" ]; then
     echo "Nutzung: $0 dateiname.osm.pbf"
     exit 1
@@ -27,7 +29,7 @@ fi
 echo "--- Erstelle IMG Datei mit MTB-Styles ---"
 
 # --style-file sagt mkgmap, dass es unsere Regeln nutzen soll
-java -jar ~/OSM/mkgmap.jar --transparent \
+$MKGMAP --transparent \
     --draw-priority=110 \
     --family-id=9998 \
     --family-name="MTB-Overlay-${BASENAME}" \
