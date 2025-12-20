@@ -2,6 +2,10 @@ LICENCE
 *.Identifier
 README
 
+*.typ
+*.img
+*.tdb
+
 doc/
 examples/
 lib/
