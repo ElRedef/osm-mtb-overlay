@@ -1,2 +1,2 @@
 # osm-mtb-overlay
-creates an overlay with mtb trails for e.g. QmapShack
+creates an overlay in .img format (garmin map) with mtb trails for e.g. QmapShack
