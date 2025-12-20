@@ -38,7 +38,7 @@ $MKGMAP --transparent \
 # 4. Aufräumen
 if [ -f "gmapsupp.img" ]; then
     mv gmapsupp.img "${BASENAME}_mtbtrails.img"
-    rm osmmap.img
+    rm osmmap.img 2>/dev/null
     rm "$EXTRACT_PBF" [0-9]*.img osmmap.tdb mtb.typ 2>/dev/null
     echo "--- Erfolg! MTB-Karte erstellt: ${BASENAME}_mtbtrails.img ---"
 else
