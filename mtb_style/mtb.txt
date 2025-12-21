@@ -9,7 +9,7 @@ CodePage=1252
 
 [_line]
 Type=0x10101
-String1=MTB Scale 2
+String1=MTB Scale 0
 LineWidth=3
 Xpm="0 0 1 0"
 "1 c #00ff00ff"
@@ -18,7 +18,7 @@ Xpm="0 0 1 0"
 
 [_line]
 Type=0x10102
-String1=MTB Scale 2
+String1=MTB Scale 1
 LineWidth=3
 Xpm="0 0 1 0"
 "1 c #3b0fffff"
@@ -27,7 +27,7 @@ Xpm="0 0 1 0"
 
 [_line]
 Type=0x10103
-String1=MTB Scale 3
+String1=MTB Scale 2
 LineWidth=4
 Xpm="0 0 1 0"
 "1 c #f01212ff"
@@ -36,17 +36,17 @@ Xpm="0 0 1 0"
 
 [_line]
 Type=0x10104
-String1=MTB Scale 2
+String1=MTB Scale 3
 LineWidth=3
 Xpm="0 0 1 0"
-"1 c #131112ff"
+"1 c #4e494bff"
 [end]
 
 
 
 [_line]
 Type=0x10106
-String1=MTB Scale 0
+String1=MTB Scale others
 LineWidth=2
 Xpm="0 0 1 0"
 "1 c #ff00eaff"
