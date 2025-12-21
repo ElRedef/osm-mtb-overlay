@@ -23,7 +23,7 @@ osmium tags-filter "$INPUT_PBF" \
 
 # 2. Compile TYP file (creates mtb.typ)
 echo "--- Compiling TYP file ---"
-$MKGMAP "$SCRIPT_DIR/mtb.txt"
+$MKGMAP "$SCRIPT_DIR/mtb_style/mtb.txt"
 
 # 3. Build IMG file with style AND TYP file
 echo "--- Creating IMG file with style and TYP ---"
