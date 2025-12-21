@@ -6,7 +6,7 @@ creates an overlay in .img format (garmin map) with mtb trails for e.g. QmapShac
 
 sudo apt install osmium-tool
 
-MKGMAP installieren: 
+Install MKGMAP:
 
 https://wiki.ubuntuusers.de/Mkgmap/
 
@@ -15,3 +15,10 @@ https://wiki.ubuntuusers.de/Mkgmap/
 Tested with: 
 Mkgmap version 4923
 osmium version 1.16.0 with libosmium version 2.20.0
+
+
+
+Useful commands:
+
+Download a map:
+wget -O Pfaffenberg.osm "http://api.openstreetmap.org/api/0.6/map?bbox=8.923771 ,48.508572 ,8.968243 ,48.527879" 

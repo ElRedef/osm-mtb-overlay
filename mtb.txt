@@ -5,12 +5,53 @@ ProductCode=1
 CodePage=1252
 [end]
 
+
+
+[_line]
+Type=0x01
+String1=MTB Scale 2
+LineWidth=3
+Xpm="0 0 1 0"
+"1 c #00ff00ff"
+[end]
+
+
+[_line]
+Type=0x02
+String1=MTB Scale 2
+LineWidth=3
+Xpm="0 0 1 0"
+"1 c #3b0fffff"
+[end]
+
+
+[_line]
+Type=0x03
+String1=MTB Scale 3
+LineWidth=4
+Xpm="0 0 1 0"
+"1 c #f01212ff"
+[end]
+
+
+
+
+[_line]
+Type=0x04
+String1=MTB Scale 2
+LineWidth=3
+Xpm="0 0 1 0"
+"1 c #131112ff"
+[end]
+
+
+
 [_line]
 Type=0x06
 String1=MTB Scale 0
 LineWidth=2
 Xpm="0 0 1 0"
-"1 c #00FF00"
+"1 c #ff00eaff"
 [end]
 
 
@@ -19,24 +60,10 @@ Type=0x0a
 String1=MTB Scale 1
 LineWidth=3
 Xpm="0 0 1 0"
-"1 c #0000FF"
+"1 c #dd9324ff"
 [end]
 
-[_line]
-Type=0x01
-String1=MTB Scale 2
-LineWidth=3
-Xpm="0 0 1 0"
-"1 c #FF0000"
-[end]
 
-[_line]
-Type=0x03
-String1=MTB Scale 3
-LineWidth=4
-Xpm="0 0 1 0"
-"1 c #000000"
-[end]
 
 
 
