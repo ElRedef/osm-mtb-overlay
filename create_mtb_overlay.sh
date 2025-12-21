@@ -39,7 +39,8 @@ $MKGMAP --transparent \
 if [ -f "gmapsupp.img" ]; then
     mv gmapsupp.img "${BASENAME}_mtbtrails.img"
     rm osmmap.img 2>/dev/null
-    #rm "$EXTRACT_PBF" [0-9]*.img osmmap.tdb mtb.typ 2>/dev/null
+    find . -maxdepth 1 -type f -regex './[0-9]+\.img' -delete
+    rm "$EXTRACT_PBF" osmmap.tdb mtb.typ 2>/dev/null
     echo "--- Success! MTB map created: ${BASENAME}_mtbtrails.img ---"
 else
     echo "Error during creation."
