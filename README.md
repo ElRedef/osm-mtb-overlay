@@ -22,7 +22,7 @@ This project provides a script to create a transparent Garmin map overlay (.img 
     ```
 
 2.  **Install Mkgmap:**
-    Follow the instructions on the [Mkgmap website](https://www.mkgmap.org.uk/download/mkgmap.html) to download and install Mkgmap. Make sure the `mkgmap.jar` file is executable and its location is known. The script will look for `mkgmap.jar` in the project directory.
+    Follow the instructions on the [Mkgmap website](https://www.mkgmap.org.uk/download/mkgmap.html) to download and install Mkgmap. Make sure the `mkgmap.jar` file is executable and its location is known. The script will look for `mkgmap.jar` in the project directory. On Ubuntu follow the instructions on [Ubuntuusers.de]](https://wiki.ubuntuusers.de/Mkgmap/).
 
 ## Usage
 
@@ -40,7 +40,7 @@ The script will generate a file named `your_map_mtbtrails.img` in the same direc
 To download a specific area from the OpenStreetMap API and create an overlay:
 
 ```bash
-wget -O brandenburg.osm "http://api.openstreetmap.org/api/0.6/map?bbox=11.1,51.5,14.8,53.6"
+wget -O BadOrb.osm "http://api.openstreetmap.org/api/0.6/map?bbox= 50.207263, 9.293300, 50.245710, 9.403534"
 ./create_mtb_overlay.sh brandenburg.osm
 ```
 
@@ -56,6 +56,10 @@ You can modify these files to change the appearance of the map. After modifying 
 ## License
 
 This project is not licensed. Please feel free to use and modify it as you wish.
+
+## Tested with
+Mkgmap version 4923
+osmium version 1.16.0 with libosmium version 2.20.0
 
 ## Acknowledgments
 
