@@ -1,10 +1,11 @@
 # MTB-Scale 0 (Sehr leicht) -> Grün
-highway=* & mtb:scale=0 [0x01 road_class=0 road_speed=1 resolution 24]
+highway=* & mtb:scale=0 [0x10101 road_class=0 road_speed=1 resolution 24]
 # MTB-Scale 1 (Leicht) -> Blau
-highway=* & mtb:scale=1 [0x02 road_class=0 road_speed=1 resolution 24]
+highway=* & mtb:scale=1 [0x10102 road_class=0 road_speed=1 resolution 24]
 # MTB-Scale 2 (Mittel) -> Rot
-highway=* & mtb:scale=2 [0x03 road_class=0 road_speed=1 resolution 24]
+highway=* & mtb:scale=2 [0x10103 road_class=0 road_speed=1 resolution 24]
 # MTB-Scale 3-5 (Schwer) -> Schwarz/Violett
-highway=* & mtb:scale>=3 [0x04 road_class=0 road_speed=1 resolution 24]
+highway=* & mtb:scale>=3 [0x10104 road_class=0 road_speed=1 resolution 24]
 # Alle anderen markierten Wege ohne Scale -> Grau/Punktiert
-route=mtb | (highway=* & mtb:scale=*) [0x06 road_class=0 road_speed=1 resolution 24]
+route=mtb | (highway=* & mtb:scale=*) [0x10106 road_class=0 road_speed=1 resolution 24]
+
